@@ -15,12 +15,13 @@
     }
 </style>
 
-<div id="map"></div>
+<div id="map" class="embed"></div>
 
 <script>
     var quakes = {"10":{"scale":0.375,"x":50.2448,"y":12.4484,"mag":3.1,"date":"2018-05-22"},"89":{"scale":0.5,"x":50.2282,"y":12.4647,"mag":4.1,"date":"2018-05-21"},"1349":{"scale":0.375,"x":50.2625,"y":12.4492,"mag":3.1,"date":"2018-05-14"},"1350":{"scale":0.375,"x":50.2825,"y":12.3991,"mag":3.1,"date":"2018-05-14"},"1418":{"scale":0.5,"x":50.2774,"y":12.4424,"mag":3.6,"date":"2018-05-14"},"1425":{"scale":0.375,"x":50.2876,"y":12.4255,"mag":3.1,"date":"2018-05-14"},"1427":{"scale":0.5,"x":50.2467,"y":12.4491,"mag":3.7,"date":"2018-05-14"},"1432":{"scale":0.375,"x":50.2824,"y":12.4157,"mag":3.0,"date":"2018-05-13"},"1718":{"scale":0.375,"x":50.2725,"y":12.4144,"mag":3.0,"date":"2018-05-12"},"1738":{"scale":0.375,"x":50.2756,"y":12.4393,"mag":3.0,"date":"2018-05-12"},"1773":{"scale":0.375,"x":50.2613,"y":12.4341,"mag":3.3,"date":"2018-05-12"},"1844":{"scale":0.375,"x":50.2641,"y":12.4333,"mag":3.2,"date":"2018-05-12"},"1889":{"scale":0.375,"x":50.276,"y":12.4321,"mag":3.0,"date":"2018-05-11"},"1892":{"scale":0.375,"x":50.2688,"y":12.4413,"mag":3.0,"date":"2018-05-11"},"2131":{"scale":0.375,"x":50.2411,"y":12.4453,"mag":3.0,"date":"2018-05-10"}};
 
     var map = L.map('map').setView([50.2524789, 12.4059461], 11);
+    map.scrollWheelZoom.disable();
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: 'Map data &copy; <a target="_blank" href="https://www.openstreetmap.org/">OpenStreetMap</a> přispěvatelé, <a target="_blank" href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, data <a target="_blank" href="https://www.emsc-csem.org/Earthquake/">CSEM - EMCS</a>',
         maxZoom: 16
